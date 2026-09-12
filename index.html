@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorpresa!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Fondo rosado lindo */
+            background-color: #d796f5;
+            /* Patrón de corazones blancos repetidos con opacidad para que se noten */
+            background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z' fill='%23ffffff' fill-opacity='0.35'/%3E%3C/svg%3E");
+            background-size: 50px 50px;
+            color: #4a4a4a;
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .encabezado-caja {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            max-width: 850px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #b71540; 
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 2em;
+        }
+
+        .subtitulo {
+            font-size: 1.05em;
+            margin-bottom: 0;
+            color: #050505; 
+            line-height: 1.5;
+            font-weight: normal;
+        }
+        
+        /* Contenedor de la corrida horizontal (Scroll) */
+        .corrida-contenedor {
+            width: 100%;
+            max-width: 1000px;
+            overflow-x: auto;
+            padding: 20px 0;
+        }
+        .corrida-fotos {
+            display: flex;
+            gap: 25px;
+            padding-bottom: 15px;
+        }
+
+        /* Tarjeta individual para cada foto y su mensaje */
+        .tarjeta {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            min-width: 280px;
+            max-width: 280px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+        .tarjeta:hover {
+            transform: translateY(-8px);
+        }
+        .tarjeta img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+        .mensaje-foto {
+            padding: 15px;
+            text-align: center;
+            font-size: 0.95em;
+            color: #2d3436;
+        }
+
+        /* Estilo para la barra de desplazamiento bonita */
+        .corrida-contenedor::-webkit-scrollbar {
+            height: 8px;
+        }
+        .corrida-contenedor::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+        }
+        .corrida-contenedor::-webkit-scrollbar-thumb {
+            background: #ec62d3;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="encabezado-caja">
+        <h1>¡Felices 21 años mi corazón! ❤️</h1>
+        <p class="subtitulo">Durante varios días estuve tratando de hacerle un recuerdito bonito para este día tan especial. Fui hablando con sus amigos y familiares para dejarle un bello momento de lo importante que es usted para la vida de distintas personas. Esta es la parte final de este regalito, espero que le guste y lo aprecie mucho. Te amo demasiado amor ❤️</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+        <audio controls>
+            <source src="audio/musiquita.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+
+    <!-- Corrida de fotos horizontal -->
+    <div class="corrida-contenedor">
+        <div class="corrida-fotos">
+            
+            <!-- Foto 1 -->
+            <div class="tarjeta">
+                <img src="img/Foto1.jpeg" alt="Recuerdo 1">
+                <div class="mensaje-foto">
+                    <p>Me alegra mucho poder verlo cumplir años y estar aquí celebrando junto a usted. ❤️</p>
+                </div>
+            </div>
+
+            <!-- Foto 2 -->
+            <div class="tarjeta">
+                <img src="img/Foto2.jpeg" alt="Recuerdo 2">
+                <div class="mensaje-foto">
+                    <p>Quiero agradecerle por siempre dejar apoyarme en usted, por hacerme más feliz y mostrarme el como es sentirse amada. ❤️</p>
+                </div>
+            </div>
+
+            <!-- Foto 3 -->
+            <div class="tarjeta">
+                <img src="img/Foto3.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Gracias por su paciencia, su amabilidad y por siempre lograr entenderme y escucharme. ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto4.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>No puedo esperar a realizar todo lo que hemos hablado y las memorias que haremos día tras día. ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto5.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Pasando el tiempo a su lado me ha hecho estar muy feliz y tratar convertirme en una mejor persona cada día. ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto6.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Siempre hace sentir que hasta los planes más pequeñito y tranquilos son los mejores estando los dos juntitos. ❤️</p>
+                </div>
+            </div>
+
+
+        <div class="tarjeta">
+                <img src="img/Foto7.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Le prometo que siempre estaré a su lado en cada momento, para apoyar sus planes, para celebrar cada paso y amarlo cada día. ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto8.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>A veces no se como decirle todo lo que significa usted para mi... ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto9.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Porque hay muchas cosas que sobresalen de mi pecho y no puedo encontrar las palabras adecuadas... ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto10.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Pero usted es mi rayito de sol diario, mi gran amor y la persona que quiero poder ver a diario. ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto11.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Por estas razones quiero poder acompañarlo durante muchos años más. ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto12.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Cuando recuerdo que estamos tan cerca de cumplir 3 añitos, siempre me acuerdo de los primeros días... ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto13.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Con todos los nervios que teniamos, sin poder vernos tan seguido a los ojos o como nos tardamos toda una tarde en darnos un beso...  ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto14.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Pero si tuviera que volver a repetir cada momento, estaría feliz de que fuera con usted amor. ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto15.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Cada día me sorprende lo afortunada que soy de compartir mi vida y proryectos con alguien tan lindo como usted.  ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto16.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Quiero poder seguir viendo nuestras series que no hubiera visto solita. ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto17.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Quiero poder seguir contandole mi día y que me escuche tan atentamente como siempre. ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto18.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Quiero poder seguir teniendo nuestras citas tan bonitas y que me diga lo bonita que me veo cuando me arreglo. ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto19.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Quiero seguir comiendo fideitos mientras me habla de las distintas comidas que debería probar. ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto20.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Pero sobre todo quiero poder seguir viviendo este sueño de estar con usted, que me recuerda todos los días lo bello que es poder estar enamorada de alguien. ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto21.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Usted llena cada pedacito de mi corazón con su ser que no sabía que necesitaba en mi vida. ❤️</p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="img/Foto22.jpeg" alt="Recuerdo 3">
+                <div class="mensaje-foto">
+                    <p>Por esto y mucho más me hace increiblemente feliz poder decirle Feliz Cumpleaños mi amor y le deseo que sea feliz muchos muchos años más. ❤️</p>
+                </div>
+            </div>
+
+            <!-- Puedes seguir copiando y pegando bloques <div class="tarjeta">...</div> para más fotos -->
+
+        </div>
+    </div>
+
+</body>
+</html>
